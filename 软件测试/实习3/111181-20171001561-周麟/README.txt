@@ -1,0 +1,1 @@
+testAppium里面的testXXX对应的分别是报告里的测试用例的测试代码

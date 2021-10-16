@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0079)http://groups.csail.mit.edu/graphics/classes/6.837/F04/assignments/assignment2/ --><HTML><HEAD><TITLE>6.837 Assignment 2</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="Microsoft FrontPage 5.0" name=GENERATOR></HEAD>
+<BODY text=#000000 bgColor=#ffffff background=34-3&#20013;&#25991;&#29256;_files/blbkgnd.gif>
+<H1>&#35745;&#31639;&#26426;&#22270;&#24418;&#23398;</H1>
+<H1>34-3: &#21464;&#25442;Transformations &amp; &#26356;&#22810;&#22522;&#26412;&#22270;&#20803;Primitives</H1>
+<P>&#22312;&#26412;&#27425;&#20316;&#19994;&#20013;, &#38656;&#35201;&#22686;&#21152;&#26032;&#30340;&#22522;&#26412;&#22270;&#20803; (&#24179;&#38754;&#21644;&#19977;&#35282;&#24418;) &#21450;&#20223;&#23556;&#21464;&#25442;&#12290;&#36824;&#35201;&#23454;&#29616;&#36879;&#35270;perspective&#30456;&#26426;, &#20004;&#31181;&#31616;&#21333;&#30340;&#28210;&#26579;&#27169;&#24335;: &#27861;&#21521;&#37327;&#21487;&#35270;&#21270;&#21644;&#25955;&#23556;diffuse&#20809;&#29031;&#12290;&#23545;&#20110;&#27861;&#21521;&#37327;&#21487;&#35270;&#21270;, 
+&#20320;&#21482;&#29992;&#31616;&#21333;&#22320;&#26174;&#31034;&#27861;&#21521;&#37327;&#30340;&#22352;&#26631;&#30340;&#32477;&#23545;&#20540;&#20026; <EM>(r, g, b)</EM> &#39068;&#33394;&#12290;&#20363;&#22914;&#65292;&#25351;&#21521;&#27491;&#25110;&#36127;<EM>z</EM>&#26041;&#21521;&#30340;&#27861;&#21521;&#37327;&#23558;&#26174;&#31034;&#20026;&#32431;&#34013; 
+<EM>(0, 0, 1)</EM>&#12290;&#38656;&#35201;&#20351;&#29992;&#40657;&#33394;&#20316;&#20026;&#32972;&#26223;&#33394;(&#26410;&#23450;&#20041;&#30340;&#27861;&#21521;&#37327;). 
+<P>&#25955;&#23556;Diffuse&#28210;&#26579;&#26159;&#23454;&#29616;&#20809;&#32447;&#19982;&#26448;&#36136;&#20132;&#20114;&#20316;&#29992;&#30340;&#31532;&#19968;&#27493;&#12290;&#32473;&#23450;&#21040;&#20809;&#28304;&#30340;&#26041;&#21521;<B>L</B> &#21644;&#27861;&#21521;&#37327;<B>N</B> &#65292;&#21487;&#20197;&#29992;&#25130;&#26029;&#30340;&#28857;&#31215;&#35745;&#31639;&#25955;&#23556;diffuse&#20809;&#29031;&#65306; 
+<P>
+<TABLE border=0>
+  <TBODY>
+  <TR>
+    <TD width=20>&nbsp;</TD>
+    <TD><EM>d</EM></TD>
+    <TD>= <B>L <SUP>.</SUP> N</B> &nbsp;&nbsp;&nbsp;&nbsp;</TD>
+    <TD>if <B>L <SUP>.</SUP> N</B> &gt; 0</TD></TR>
+  <TR>
+    <TD>&nbsp; </TD>
+    <TD>&nbsp; 
+    <TD>= 0 
+    <TD>&#20854;&#23427; </TD></TR></TBODY></TABLE>
+<P>&#22914;&#26524;&#21487;&#35265;&#23545;&#35937;&#30340;&#39068;&#33394;&#20026; <EM>c<SUB>object</SUB> = (r, g, b)</EM>, &#32780;&#20809;&#28304;&#30340;&#39068;&#33394;&#20026; <EM>c<SUB>light</SUB> = (L<SUB>r</SUB>, 
+L<SUB>g</SUB>, L<SUB>b</SUB>)</EM>, &#21017;&#35937;&#32032;&#30340;&#39068;&#33394;&#20026; 
+<EM>c<SUB>pixel</SUB> = (rL<SUB>r</SUB>d, gL<SUB>g</SUB>d, 
+bL<SUB>b</SUB>d)</EM>. &#22810;&#20010;&#20809;&#28304;&#36890;&#36807;&#31616;&#21333;&#22320;&#21472;&#21152;&#20854;&#36129;&#29486;&#26469;&#23454;&#29616;&#12290;&#36824;&#21487;&#20197;&#21253;&#21547;&#29615;&#22659;&#20809;&#65292;&#20854;&#33394;&#24425;&#20540;&#20026;c<SUB>ambient</SUB>, 
+&#23427;&#23545;&#35843;&#35797;&#38750;&#24120;&#26377;&#24110;&#21161;&#12290;&#27809;&#26377;&#23427;&#65292;&#32972;&#20809;&#38754;&#23558;&#20026;&#20840;&#40657;&#12290;&#23558;&#20197;&#19978;&#20869;&#23481;&#21512;&#21040;&#19968;&#36215;&#65292;&#20844;&#24335;&#20026;&#65306; 
+<P>&nbsp;&nbsp;&nbsp;&nbsp; c<SUB>pixel</SUB> &nbsp;=&nbsp; c<SUB>ambient</SUB> 
+* c<SUB>object</SUB> + SUM<SUB>i</SUB> [ clamped(<B>L<SUB>i</SUB> <SUP>.</SUP> 
+N</B>) * c<SUB>light<SUB>i</SUB></SUB> * c<SUB>object</SUB> ] 
+<P>&#39068;&#33394;&#21521;&#37327;&#30340;&#30456;&#20056;&#26159;&#36880;&#39033;&#36827;&#34892;&#30340;&#12290;&#27880;&#24847;&#65292;&#22914;&#26524;&#29615;&#22659;&#20809;&#20026;<EM>(1, 1, 1)</EM> &#32780;&#20809;&#28304;&#20026;<EM>(0, 0, 0)</EM>, 
+&#37027;&#20040;&#20320;&#23558;&#24471;&#21040;&#19978;&#19968;&#20010;&#20316;&#19994;&#24120;&#25968;&#20809;&#29031;&#12290; 
+<H3>&#20219;&#21153;</H3>
+<UL>
+  <P>
+  <LI>&#25105;&#20204;&#20462;&#25913;&#20102;<TT>Hit&#65288;&#20132;&#28857;&#65289;</TT>&#31867;&#65292;&#20197;&#23384;&#20648;&#20132;&#28857;&#30340;&#27861;&#21521;&#37327;&#12290;&#20462;&#25913;&#20320;&#30340;&#29699;&#27714;&#20132;&#31243;&#24207;&#65292;&#23558;&#27861;&#32447;&#20256;&#32473;<TT>Hit&#65288;&#20132;&#28857;&#65289;</TT>. 
+  <P>
+  <UL>
+    <LI><A 
+    href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/hit.h">hit.h</A> 
+    </LI></UL>
+  <P></P>
+  <LI>&#23454;&#29616;&#26032;&#30340;&#28210;&#26579;&#27169;&#22411;, &#27861;&#21521;&#37327;&#21487;&#35270;&#21270;&#12290;&#22312;&#20998;&#26512;&#22120;parse&#20013;&#22686;&#21152;&#20195;&#30721;&#65292;&#26469;&#22788;&#29702;&#26032;&#30340;&#21629;&#20196;&#34892;&#36873;&#39033; <TT>-normals &lt;normal_file.tga&gt;&#65292;</TT> 
+  &#20197;&#25351;&#23450;&#29992;&#20110;&#27861;&#21521;&#37327;&#21487;&#35270;&#21270;&#30340;&#36755;&#20986;&#32467;&#26524;&#25991;&#20214;&#12290;(&#35265;&#19979;&#38754;&#30340;&#20363;&#23376;)&#12290; 
+  <P></P>
+  <LI>&#22686;&#21152;&#25955;&#23556;diffuse&#20809;&#29031;&#12290;&#25105;&#20204;&#25552;&#20379;&#20102;&#32431;&#34394;&#20809;&#28304;&#65288;<TT>Light&#65289;</TT>&#31867;&#65292;&#21644;&#19968;&#20010;&#31616;&#21333;&#30340;&#26377;&#21521;&#20809;&#28304;&#12290;&#22330;&#26223;&#20809;&#28304;&#21487;&#20197;&#36890;&#36807;<TT>SceneParser::getLight()</TT> 
+  &#21644; <TT>SceneParser::getAmbientLight()</TT>&#26041;&#27861;&#35775;&#38382;&#12290;&#20351;&#29992;<TT>Light&#65288;&#20809;&#28304;&#65289;</TT>&#31867;&#30340;&#26041;&#27861;&#65306; <PRE>   void getIllumination (const Vec3f &amp;p, Vec3f &amp;dir, Vec3f &amp;col); 
+</PRE>
+  <P>&#26469;&#27714;&#31354;&#38388;&#20013;&#32473;&#23450;&#28857;&#30340;&#20809;&#29031;&#65288;illumination&#65289;&#12290;p&#26159;&#38656;&#35201;&#20809;&#29031;&#30340;&#20132;&#28857;, &#20989;&#25968;&#22312;<TT>dir</TT>&#20013;&#36820;&#22238;&#21333;&#20301;&#21270;&#21518;&#30340;&#65292;&#20132;&#28857;&#25351;&#21521;&#20809;&#28304;&#30340;&#26041;&#21521;&#65292;&#32780;&#22312;<TT>col</TT>&#20013;&#36820;&#22238;&#20809;&#24378;. 
+  <P>
+  <UL>
+    <LI><A 
+    href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/light.h">light.h</A> 
+    </LI></UL>
+  <P></P>
+  <LI>&#22312;&#19979;&#38754;&#30340;5 &#21644; 7 &#30340;&#27979;&#35797;&#22330;&#26223;&#20013;&#65292;&#25105;&#20204;&#35201;&#27714;&#22823;&#23478;&#28210;&#26579;&#29699;&#21644;&#19977;&#35282;&#24418;&#30340;"&#38169;&#35823;&#38754;wrong" &#25110; 
+  "&#32972;&#38754;back"&#12290;&#22312;&#20320;&#30340;raytracer&#20013;&#22686;&#21152; 
+  <TT>-shade_back</TT> &#36873;&#39033;&#12290;&#24403;&#27492;&#36873;&#39033;&#25351;&#23450;&#21518;&#65292;&#25105;&#20204;&#24076;&#26395;&#20320;&#37319;&#21462;&#21516;&#26679;&#30340;&#26041;&#27861;&#22788;&#29702;&#29289;&#20307;&#30340;&#20004;&#38754;&#12290;&#21363;&#65292;&#24403;&#30524;&#30555;&#20301;&#20110;&#34920;&#38754;&#30340;&quot;&#38169;&#35823;"&#38754;&#26102;(&#21363;&#20809;&#32447;&#26041;&#21521;&#21644;&#27861;&#21521;&#37327;&#30340;&#28857;&#31215;&#20026;&#27491;&#25968;&#26102;)&#65292;&#20320;&#38656;&#35201;&#32763;&#36716;&#27861;&#21521;&#37327;&#12290;&#22312;&#27491;&#35201;&#28210;&#26579;&#35937;&#32032;&#20043;&#21069;&#65292;&#36827;&#34892;&#27492;&#27861;&#21521;&#37327;&#32763;&#36716;&#65292;&#19981;&#35201;&#22312;&#23545;&#35937;&#27714;&#20132;&#20195;&#30721;&#20013;&#36827;&#34892;&#12290;&#22914;&#26524;&#26410;&#25351;&#23450; <TT>-shade_back</TT> 
+  &#26631;&#35760;&#65292;&#21017;&#24212;&#35813;&#29992;&#19981;&#21516;&#30340;&#32972;&#38754;&#28210;&#26579;&#26041;&#27861;&#36827;&#34892;&#28210;&#26579;&#65292;&#20197;&#24110;&#21161;&#20320;&#35843;&#35797;&#12290; 
+  &#38656;&#35201;&#20390;&#27979;&#20986;&#32972;&#38754;&#20197;&#23454;&#29616;&#36879;&#26126;&#29289;&#20307;&#30340;&#25240;&#23556;&#65292;&#19988;&#22312;&#23454;&#26102;&#24212;&#29992;&#20013;&#36890;&#24120;&#19981;&#20570;&#28210;&#26579;&#12290;&#21518;&#38754;&#30340;&#35762;&#35838;&#21644;&#20316;&#19994;&#20013;&#20250;&#20877;&#27425;&#36935;&#21040;&#12290; 
+  <P></P>
+  <LI>&#28155;&#21152;&#20174;<TT>Camera</TT>&#23548;&#20986;&#30340;<TT>PerspectiveCamera</TT>&#31867;&#12290;&#36873;&#25321;&#20320;&#21916;&#22909;&#30340;&#30456;&#26426;&#20869;&#37096;&#34920;&#31034;&#12290;&#19982;&#27491;&#20132;&#30456;&#26426;&#31867;&#20284;&#65292;&#22330;&#26223;&#20998;&#26512;&#22120;&#25552;&#20379;&#20102;&#21407;&#28857;center&#12289;&#21521;&#21069;&#26041;&#21521;direction, 
+  &#21521;&#19978;up &#21521;&#37327;&#12290;&#20294;&#23545;&#20110;&#36879;&#35270;&#30456;&#26426;&#65292;&#35270;&#35282;&#65288;field of view&#65289;&#20197;&#35282;&#24230;&#26041;&#24335;&#25351;&#23450;(&#22914;&#22270;&#25152;&#31034;). <PRE>   PerspectiveCamera(Vec3f ¢er, Vec3f &amp;direction, Vec3f &amp;up, float angle);
+</PRE>
+  <P><IMG height=436 src="34-3&#20013;&#25991;&#29256;_files/perspective_camera.png" width=500> 
+  <P>&#25552;&#31034;: &#35838;&#22530;&#19978;&#65292;&#25105;&#20204;&#32463;&#24120;&#25552;&#21040;&#31354;&#38388;&#20013;&#30340;"&#34394;&#25311;&#23631;&#24149;"&#12290;&#21487;&#20197;&#36890;&#36807;&#31616;&#21333;&#30340;&#19977;&#35282;&#35745;&#31639;&#20986;&#27492;&quot;virtual 
+  screen&#34394;&#25311;&#23631;&#24149;&quot;&#30340;&#20301;&#32622;&#21644;&#22823;&#23567;&#12290;&#28982;&#21518;&#23601;&#21487;&#20197;&#22312;&#34394;&#25311;&#23631;&#24149;&#36827;&#34892;&#25554;&#20540;&#65292;&#26041;&#27861;&#21644;&#27491;&#20132;&#30456;&#26426;&#19978;&#30340;&#19968;&#26679;&#12290;&#26041;&#21521;&#21521;&#37327;&#21487;&#20197;&#36890;&#36807;&#20174;&#23631;&#24149;&#19978;&#30340;&#28857;&#20943;&#21435;&#30456;&#26426;&#21407;&#28857;&#24471;&#21040;&#12290;&#19981;&#35201;&#24536;&#35760;&#21333;&#20301;&#21270;! 
+  &#30456;&#27604;&#20043;&#19979;, &#22914;&#26524;&#23545;&#29031;&#30456;&#26426;&#30340;&#35282;&#24230;&#25554;&#20540;&#26469;&#33719;&#24471;&#26041;&#21521;&#21521;&#37327;&#65292;&#20320;&#30340;&#22330;&#26223;&#30475;&#36215;&#26469;&#20250;&#21464;&#24418; - &#29305;&#21035;&#26159;&#23545;&#36739;&#22823;&#30340;&#30456;&#26426;&#35270;&#35282;&#65292;&#23558;&#20986;&#29616;&#40060;&#30524;&#38236;&#22836;&#30340;&#25928;&#26524;&#12290;<P>&#27880;&#24847;: &#21040;&#35937;&#24179;&#38754;&#30340;&#36317;&#31163;&#21644;&#35937;&#24179;&#38754;&#30340;&#22823;&#23567;&#26159;&#19981;&#24517;&#35201;&#30693;&#36947;&#30340;&#12290;&#24819;&#24819;&#20026;&#20160;&#20040;? 
+  <P></P>
+  <LI>&#23454;&#29616;<TT>Plane&#65288;&#24179;&#38754;&#65289;</TT>, &#30001;<TT>Object3D</TT>&#23548;&#20986;&#30340;&#26080;&#38480;&#24179;&#38754;&#22270;&#20803;&#12290;&#20351;&#29992;&#20320;&#25152;&#36873;&#25321;&#30340;&#34920;&#31034;&#65292;&#20294;&#26500;&#36896;&#20989;&#25968;&#20551;&#23450;&#20026;: <PRE> 
+   Plane(Vec3f &amp;normal, float d, Material *m); 
+</PRE>
+  <P><TT>d</TT> &#26159;&#21407;&#28857;&#20559;&#31227;&#65292;&#21363;&#24179;&#38754;&#26041;&#31243;&#20026;<B>P <SUP>.</SUP> n</B> = d&#12290;&#20320;&#20063;&#21487;&#20197;&#23454;&#29616;&#20854;&#20182;&#26500;&#36896;&#20989;&#25968;(&#22914;&#20351;&#29992;&#19977;&#20010;&#28857;)&#12290;&#23454;&#29616;<TT>intersect&#65288;&#27714;&#20132;&#65289;</TT>, 
+  &#24182;&#35831;&#35760;&#20303;&#65292;&#20320;&#38500;&#20102;&#35201;&#26356;&#26032;&#20132;&#28857;&#36317;&#31163; <EM>t</EM>&#21644;&#39068;&#33394;&#22806;&#65292;&#36824;&#35201;&#26356;&#26032;&#23384;&#20648;&#22312;<TT>Hit&#65288;&#20132;&#28857;&#65289;</TT>&#20013;&#30340;&#27861;&#21521;&#37327;&#12290;<P></P>
+  <LI>&#23454;&#29616;&#19977;&#35282;&#24418;&#22522;&#26412;&#22270;&#20803;&#65292;&#21516;&#26679;&#30001;<TT>Object3D</TT>&#23548;&#20986;&#12290;&#26500;&#36896;&#20989;&#25968;&#30340;&#21442;&#25968;&#26377;3&#20010;&#32467;&#28857;&#65306; <PRE>   Triangle(Vec3f &amp;a, Vec3f &amp;b, Vec3f &amp;c, Material *m);
+</PRE>
+  <P>Use the method of your choice to implement the ray-triangle intersection: 
+  general polygon with in-polygon test, barycentric coordinates, etc. We can 
+  compute the normal by taking the cross-product of two edges, but note that the 
+  normal direction for a triangle is ambiguous. We'll use the usual convention 
+  that counter-clockwise vertex ordering indicates the outward-facing side. If 
+  your renderings look incorrect, just flip the cross-product to match the 
+  convention. 
+  <P></P>
+  <LI>Derive a subclass <TT>Transform</TT> from <TT>Object3D</TT>. Similar to a 
+  <TT>Group</TT>, a <TT>Transform</TT> will store a pointer to an 
+  <TT>Object3D</TT> (but only one, not an array). The constructor of a 
+  <TT>Transform</TT> takes a 4x4 matrix as input and a pointer to the 
+  <TT>Object3D</TT> modified by the transformation: <PRE>   Transform(Matrix &amp;m, Object3D *o);
+</PRE>The <TT>intersect</TT> routine will first transform the ray, then 
+  delegate to the <TT>intersect</TT> routine of the contained object. Make sure 
+  to correctly transform the resulting normal according to the rule seen in 
+  lecture. You may choose to normalize the direction of the transformed ray or 
+  leave it un-normalized. <font color="#FF0000">If you decide not to normalize the direction, you 
+  might need to update some of your intersection code.</font> 
+  <P style="line-height: 150%"><font face="Courier"><u><font color="#0000FF">&#32769;&#24072;&#35780;&#27880;&#65306;</font></u></font><u>&#22914;&#26524;<SPAN 
+lang=zh-cn>&#20320;&#22312;&#31532;&#21313;&#20845;&#20010;&#31034;&#20363;&#20013;&#20986;&#29616;&#38382;&#39064;&#65292;&#21487;&#33021;&#20250;&#19982;&#19978;&#38754;&#30340;&#32418;&#23383;&#26377;&#20851;&#12290;</SPAN></u><span lang="zh-cn"><u>&#22240;&#20026;&#27492;&#26102;&#26041;&#21521;&#21521;&#37327;&#19981;&#26159;&#21333;&#20301;&#21521;&#37327;&#65292;&#25152;&#20197;&#20320;&#27714;&#19982;&#22278;&#30340;&#20132;&#28857;&#26102;&#65292;&#19968;&#20803;&#20108;&#27425;&#26041;&#31243;&#30340;&#31532;&#19968;&#39033;&#21487;&#33021;&#23601;&#19981;&#26159;1&#20102;&#12290;&#20855;&#20307;&#26159;&#20160;&#20040;&#65292;&#20320;&#24819;&#24819;&#30475;&#12290;</u></span></P>
+  <p>&nbsp;</p>
+  <P></P>
+  <LI>Extra credit: Implement two different ray-triangle intersection methods 
+  and compare; add cones or cylinders; implement Constructive Solid Geometry 
+  (CSG), IFS, or non-linear cameras. For CSG, you need to implement a new 
+  <TT>intersectAll</TT> method for your <TT>Object3D</TT> classes. This function 
+  returns <EM>all</EM> of the intersections of the ray with the object, not just 
+  the closest one. For additional primitives such as cones and cylinders, 
+  implement the simple case of axis-aligned primitives and use transformations. 
+  </LI></UL>
+<H3>&#26356;&#26032;&#20102;&#30340;&#25991;&#20214;</H3>
+<UL>
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/scene_parser.h">scene_parser.h</A> 
+
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/scene_parser.C">scene_parser.C</A> 
+  </LI></UL>&#22914;&#26524;&#20320;&#26377;&#20852;&#36259;&#65292;&#36825;&#37324;&#26159;&#26412;&#20316;&#19994;&#20013;&#20351;&#29992;&#30340;<a href="http://groups.csail.mit.edu/graphics/classes/6.837/F04/assignments/assignment2/grammar.html">&#22330;&#26223;&#25551;&#36848;&#25991;&#20214;&#30340;&#35821;&#27861;</a>&#12290; 
+<P>&#38656;&#35201;&#32534;&#36753;Makefile &#20197;&#21253;&#21547;&#20320;&#28155;&#21152;&#21040;&#24037;&#31243;&#20013;&#30340;&#20219;&#24847;.C&#25991;&#20214;. 
+<H3>&#25552;&#31034;</H3>
+<UL>
+  <LI>Parse the arguments of the program in a separate function. It will make 
+  your code easier to read. 
+  <LI>Implement the normal visualization and diffuse shading before the 
+  transformations. 
+  <LI>Use the various rendering modes (normal, diffuse, distance) to debug your 
+  code. </LI></UL>
+<H3>Input Files</H3>
+<UL>
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/scene2_01.txt">scene2_01.txt</A> 
+
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/scene2_02.txt">scene2_02.txt</A> 
+
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/scene2_03.txt">scene2_03.txt</A> 
+
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/scene2_04.txt">scene2_04.txt</A> 
+
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/scene2_05.txt">scene2_05.txt</A> 
+
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/scene2_06.txt">scene2_06.txt</A> 
+
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/scene2_07.txt">scene2_07.txt</A> 
+
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/scene2_08.txt">scene2_08.txt</A> 
+
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/scene2_09.txt">scene2_09.txt</A> 
+
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/scene2_10.txt">scene2_10.txt</A> 
+
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/scene2_11.txt">scene2_11.txt</A> 
+
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/scene2_12.txt">scene2_12.txt</A> 
+
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/scene2_13.txt">scene2_13.txt</A> 
+
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/scene2_14.txt">scene2_14.txt</A> 
+
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/scene2_15.txt">scene2_15.txt</A> 
+
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/scene2_16.txt">scene2_16.txt</A> 
+  (&#26032;! &#29992;&#20110;&#27979;&#35797;&#32553;&#25918;) </LI></UL>
+<H3>&#19977;&#35282;&#32593; (.obj &#26684;&#24335;)</H3>
+<P>
+<UL>
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/cube.obj">cube.obj</A> 
+
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/bunny_200.obj">bunny_200.obj</A> 
+
+  <LI><A 
+  href="file:///C:/graphics/06/&#20013;&#25991;to%20student/Assignment3_files/bunny_1k.obj">bunny_1k.obj</A> 
+  </LI></UL>
+<H3>&#32467;&#26524;&#31034;&#20363;</H3>
+<P><PRE>raytracer -input scene2_01.txt -size 200 200 -output output2_01.tga
+raytracer -input scene2_02.txt -size 200 200 -output output2_02.tga
+</PRE><IMG height=200 src="34-3&#20013;&#25991;&#29256;_files/output2_01.png" width=200> <IMG 
+height=200 src="34-3&#20013;&#25991;&#29256;_files/output2_02.png" width=200> 
+<P><PRE>raytracer -input scene2_03.txt -size 200 200 -output output2_03.tga -normals normals2_03.tga
+</PRE>
+<P><IMG height=200 src="34-3&#20013;&#25991;&#29256;_files/output2_03.png" width=200> <IMG height=200 
+src="34-3&#20013;&#25991;&#29256;_files/normals2_03.png" width=200> 
+<P><PRE>raytracer -input scene2_04.txt -size 200 200 -output output2_04.tga -normals normals2_04.tga
+</PRE><IMG height=200 src="34-3&#20013;&#25991;&#29256;_files/output2_04.png" width=200> <IMG 
+height=200 src="34-3&#20013;&#25991;&#29256;_files/normals2_04.png" width=200> 
+<P><PRE>raytracer -input scene2_05.txt -size 200 200 -output output2_05.tga -depth 9 11 depth2_05.tga -normals normals2_05.tga -shade_back
+raytracer -input scene2_05.txt -size 200 200 -output output2_05_no_back.tga
+</PRE><IMG height=200 src="34-3&#20013;&#25991;&#29256;_files/output2_05.png" width=200> <IMG 
+height=200 src="34-3&#20013;&#25991;&#29256;_files/depth2_05.png" width=200> <IMG height=200 
+src="34-3&#20013;&#25991;&#29256;_files/normals2_05.png" width=200> <IMG height=200 
+src="34-3&#20013;&#25991;&#29256;_files/output2_05_no_back.png" width=200> 
+<P><PRE>raytracer -input scene2_06.txt -size 200 200 -output output2_06.tga -depth 8 20 depth2_06.tga -normals normals2_06.tga
+</PRE><IMG height=200 src="34-3&#20013;&#25991;&#29256;_files/output2_06.png" width=200> <IMG 
+height=200 src="34-3&#20013;&#25991;&#29256;_files/depth2_06.png" width=200> <IMG height=200 
+src="34-3&#20013;&#25991;&#29256;_files/normals2_06.png" width=200> 
+<P><PRE>raytracer -input scene2_07.txt -size 200 200 -output output2_07.tga -depth 9 11 depth2_07.tga -normals normals2_07.tga -shade_back
+raytracer -input scene2_07.txt -size 200 200 -output output2_07_no_back.tga
+</PRE><IMG height=200 src="34-3&#20013;&#25991;&#29256;_files/output2_07.png" width=200> <IMG 
+height=200 src="34-3&#20013;&#25991;&#29256;_files/depth2_07.png" width=200> <IMG height=200 
+src="34-3&#20013;&#25991;&#29256;_files/normals2_07.png" width=200> <IMG height=200 
+src="34-3&#20013;&#25991;&#29256;_files/output2_07_no_back.png" width=200> 
+<P><PRE>raytracer -input scene2_08.txt -size 200 200 -output output2_08.tga
+raytracer -input scene2_09.txt -size 200 200 -output output2_09.tga
+raytracer -input scene2_10.txt -size 200 200 -output output2_10.tga
+</PRE><IMG height=200 src="34-3&#20013;&#25991;&#29256;_files/output2_08.png" width=200> <IMG 
+height=200 src="34-3&#20013;&#25991;&#29256;_files/output2_09.png" width=200> <IMG height=200 
+src="34-3&#20013;&#25991;&#29256;_files/output2_10.png" width=200> 
+<P><PRE>raytracer -input scene2_11.txt -size 200 200 -output output2_11.tga -normals normals2_11.tga
+</PRE><IMG height=200 src="34-3&#20013;&#25991;&#29256;_files/output2_11.png" width=200> <IMG 
+height=200 src="34-3&#20013;&#25991;&#29256;_files/normals2_11.png" width=200> 
+<P><PRE>raytracer -input scene2_12.txt -size 200 200 -output output2_12.tga -normals normals2_12.tga
+</PRE><IMG height=200 src="34-3&#20013;&#25991;&#29256;_files/output2_12.png" width=200> <IMG 
+height=200 src="34-3&#20013;&#25991;&#29256;_files/normals2_12.png" width=200> 
+<P><PRE>raytracer -input scene2_13.txt -size 200 200 -output output2_13.tga -normals normals2_13.tga
+</PRE><IMG height=200 src="34-3&#20013;&#25991;&#29256;_files/output2_13.png" width=200> <IMG 
+height=200 src="34-3&#20013;&#25991;&#29256;_files/normals2_13.png" width=200> 
+<P><PRE>raytracer -input scene2_14.txt -size 200 200 -output output2_14.tga
+raytracer -input scene2_15.txt -size 200 200 -output output2_15.tga
+</PRE><IMG height=200 src="34-3&#20013;&#25991;&#29256;_files/output2_14.png" width=200> <IMG 
+height=200 src="34-3&#20013;&#25991;&#29256;_files/output2_15.png" width=200> 
+<P><PRE>raytracer -input scene2_16.txt -size 200 200 -output output2_16.tga -depth 2 7 depth2_16.tga
+</PRE><IMG height=200 src="34-3&#20013;&#25991;&#29256;_files/output2_16.png" width=200> <IMG 
+height=200 src="34-3&#20013;&#25991;&#29256;_files/depth2_16.png" width=200> 
+<HR>
+</BODY></HTML>

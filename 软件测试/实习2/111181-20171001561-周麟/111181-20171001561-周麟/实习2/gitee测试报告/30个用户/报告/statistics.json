@@ -1,0 +1,34 @@
+{
+  "HTTP请求" : {
+    "transaction" : "HTTP请求",
+    "sampleCount" : 30,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 2010.5666666666666,
+    "medianResTime" : 2042.5,
+    "minResTime" : 930.0,
+    "maxResTime" : 2631.0,
+    "pct1ResTime" : 2268.9,
+    "pct2ResTime" : 2443.45,
+    "pct3ResTime" : 2631.0,
+    "throughput" : 10.023387905111928,
+    "receivedKBytesPerSec" : 41.963148387905115,
+    "sentKBytesPerSec" : 1.409538924156365
+  },
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 30,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 2010.5666666666666,
+    "medianResTime" : 2042.5,
+    "minResTime" : 930.0,
+    "maxResTime" : 2631.0,
+    "pct1ResTime" : 2268.9,
+    "pct2ResTime" : 2443.45,
+    "pct3ResTime" : 2631.0,
+    "throughput" : 10.023387905111928,
+    "receivedKBytesPerSec" : 41.963148387905115,
+    "sentKBytesPerSec" : 1.409538924156365
+  }
+}

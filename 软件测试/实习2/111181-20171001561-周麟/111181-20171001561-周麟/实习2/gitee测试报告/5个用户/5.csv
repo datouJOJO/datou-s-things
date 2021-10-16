@@ -1,0 +1,6 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1618124396639,1015,HTTP请求,200,OK,搜索 1-1,text,true,,4287,144,5,5,https://gitee.com/search/relative_project?q=test,1015,0,119
+1618124396845,909,HTTP请求,200,OK,搜索 1-2,text,true,,4287,144,4,4,https://gitee.com/search/relative_project?q=test,909,0,113
+1618124397047,843,HTTP请求,200,OK,搜索 1-3,text,true,,4287,144,3,3,https://gitee.com/search/relative_project?q=test,843,0,112
+1618124397247,941,HTTP请求,200,OK,搜索 1-4,text,true,,4287,144,2,2,https://gitee.com/search/relative_project?q=test,941,0,112
+1618124397450,943,HTTP请求,200,OK,搜索 1-5,text,true,,4287,144,1,1,https://gitee.com/search/relative_project?q=test,943,0,121

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Baggage calculator for Air China</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>旅客表单</h1>
+    </header>
+
+    <section class="container">
+        <form id="my-form">
+            <h1>请输入旅客信息</h1>
+            <div class="msg"></div>
+            <!--通过按钮来增加编辑行李数量的输入框-->
+                <label for="luggage">增加或减少行李数量</label>
+                <div class="addOrDel">
+                    <button type="button" id="addP" style="width: 10%">+</button>
+                    <button type="button" id="delP" style="width: 10%">-</button>
+                </div>
+                <div id="luggage">
+                    <label for="long" >行李类型及尺寸</label>
+                    <div class="form-inline">
+                        <select id="kindOfP" size="1" style="width: 33%;">
+                            <option value ="free">可免费运输的特殊行李</option>
+                            <option value ="sport">运动器械器具</option>
+                            <option value ="other">其他</option>
+                            <option value ="normalP">普通行李</option>
+                        </select>
+                        长<input type='text' id="long" style="width: 10%"/>
+                        宽<input type='text' id="width" style="width: 10%"/>
+                        高<input type='text' id="height" style="width: 10%"/>
+                        重量<input type='text' id="weight" style="width: 10%"/>
+                    </div>
+                </div>
+                <div class="form-inline">
+                    <div id="pInfo">
+                    </div>
+                </div>
+            <div>
+                <label for="kindOfSeat">座舱类型</label>
+                <select id="kindOfSeat" size="1" style="width: 100%">
+                    <option value ="topSeat">头等舱</option>
+                    <option value ="business">公务舱</option>
+                    <option value ="normalSeat">悦享经济舱/超级经济舱</option>
+                    <option value ="lowSeat">经济舱</option>
+                </select>
+            </div>
+            <div>
+                <label for="kindOfTicket">持票类型</label>
+                <select id="kindOfTicket" size="1" style="width: 100%">
+                    <option value ="adultAndChild">成人或儿童客票</option>
+                    <option value ="baby">婴儿客票</option>
+                </select>
+            </div>
+            <div>
+                <label for="kindOfCustom">旅客类型</label>
+                <select id="kindOfCustom" size="1" style="width: 100%;">
+                    <option value ="normal">普通旅客</option>
+                    <option value ="injured">残疾、伤、病旅客</option>
+                </select>
+            </div>
+            <div>
+                <label for="kindOfFly">航班类型</label>
+                <select id="kindOfFly" size="1" style="width: 100%;" onchange="loc()">
+                    <option value ="china">国内航班</option>
+                    <option value ="international">国际、地区航班</option>
+                </select>
+            </div>
+            <!--作为添加国际航班的选项-->
+            <div id="location"></div>
+            <div>
+                <label for="kindOfCard">持卡类型</label>
+                <select id="kindOfCard" size="1" style="width: 100%;">
+                    <option value ="noCard">无</option>
+                    <option value ="bjk">凤凰知音终生白金卡</option>
+                    <option value ="jkyk">凤凰知音金卡、银卡</option>
+                    <option value ="xklmjk">星空联盟金卡</option>
+                </select>
+            </div>
+            <input class="btn" id="subAll" type="submit" value="Submit">
+        </form>
+        <label style="font-size:10px;">区域一：美洲（除美国/加拿大外）/加勒比海地区与欧洲/非洲/中东/亚洲/西南太平洋之间的航
+            线</label>
+        <br>
+        <label style="font-size:10px;">区域二：欧洲/中东与非洲/亚洲/西南太平洋之间航线；日本与西南太平洋之间航线；
+            日本/西南太平洋与亚洲（不含日本及西南太平洋）/非洲之间航线</label>
+        <br>
+        <label style="font-size:10px;">区域三：加拿大与美洲（除美国/加拿大外）/加勒比海地区/欧洲/非洲/中东/亚洲/西南太平洋之间
+            航线</label>
+        <br>
+        <label style="font-size:10px;">区域四：美国（含夏威夷）与美洲（除美国外）/加勒比海地区/欧洲/非洲/中东/亚洲/西南太平洋
+            之间航线</label>
+        <br>
+        <label style="font-size:10px;">区域五：非洲与亚洲（除日本外)之间航线；欧洲与中东之间航线；亚洲（除日本)内航线；
+            美洲（除美国/加拿大）及加勒比海地区内航线</label>
+        <ul id="users"></ul>
+    </section>
+
+    <script src="main.js"></script>
+    <script>
+        function loc() {
+            //增加两个 目的地和终点的文本框
+            // console.log('test')
+            const idx = document.getElementById('kindOfFly').selectedIndex;
+            const temp = document.getElementById('location')
+            if (idx === 1) {
+                temp.innerHTML = '<label for="area">途径：</label><select id="goBy" size="1" style="width: 100%;">\n' +
+                    '<option value ="gb1">夏威夷、欧洲、亚洲、非洲</option>\n' +
+                    '<option value ="gb2">美洲、加勒比地区、中东、日本、巴基斯坦、新加坡、哈萨克斯坦</option>\n' +
+                    '<option value ="gb3">其他</option>\n' +
+                    '</select>' +
+                '<label for="area">区域：</label><select id="area" size="1" style="width: 100%;">\n' +
+                    '<option value ="a1">区域一</option>\n' +
+                    '<option value ="a2">区域二</option>\n' +
+                    '<option value ="a3">区域三</option>\n' +
+                    '<option value ="a4">区域四</option>\n' +
+                    '<option value ="a5">区域五</option>\n' +
+                    '</select>'
+            }else{
+                temp.innerHTML = ''
+            }
+        }
+    </script>
+</body>
+</html>

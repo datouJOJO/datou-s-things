@@ -1,0 +1,341 @@
+
+SQL*Plus: Release 12.2.0.1.0 Production on 星期一 11月 30 08:43:44 2020
+
+Copyright (c) 1982, 2016, Oracle.  All rights reserved.
+
+上次成功登录时间: 星期日 11月 29 2020 23:17:29 +08:00
+
+连接到: 
+Oracle Database 12c Enterprise Edition Release 12.2.0.1.0 - 64bit Production
+
+create table animalImfo(
+             *
+第 1 行出现错误:
+ORA-00955: 名称已由现有对象使用
+
+
+insert into animalImfo values('001','可乐','狗','公',1,'src/pic/kele.jpg','',1)
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008314)
+
+
+insert into animalImfo values('002','土豆','猫','母',1,'src/pic/tudou.jpg','',1)
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008314)
+
+
+insert into animalImfo values('003','乐乐','兔子','母',2,'src/pic/lele.jpg','',1)
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008314)
+
+
+insert into animalImfo values('004','果冻','狗','公',1,'src/pic/guodong.jpg','',1)
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008314)
+
+
+insert into animalImfo values('005','威风','狗','母',3,'src/pic/weifeng.jpg','',2)
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008314)
+
+
+insert into animalImfo values('006','小Q','仓鼠','母',2,'src/pic/xiaoq.jpg','',2)
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008314)
+
+
+insert into animalImfo values('007','奶茶','猫','公',1,'src/pic/naicha.jpg','',2)
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008314)
+
+
+insert into animalImfo values('008','当当','狗','母',3,'src/pic/dangdang.jpg','',2)
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008314)
+
+
+insert into animalImfo values('009','闪电','鹦鹉','母',4,'src/pic/shandian.jpg','',3)
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008314)
+
+
+insert into animalImfo values('010','维恩','狗','公',2,'src/pic/weien.jpg','',3)
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008314)
+
+
+insert into animalImfo values('011','劲宝','狗','公',2,'src/pic/jinbao.jpg','',3)
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008314)
+
+
+insert into animalImfo values('012','牛奶','可达鸭','母',1,'src/pic/niunai.jpg','',3)
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008314)
+
+
+create table healthImfo(
+             *
+第 1 行出现错误:
+ORA-00955: 名称已由现有对象使用
+
+
+insert into healthImfo values('001','001','001','健康',sysdate,'')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008315)
+
+
+insert into healthImfo values('002','002','001','健康',sysdate,'')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008315)
+
+
+insert into healthImfo values('003','003','002','健康',sysdate,'')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008315)
+
+
+insert into healthImfo values('004','004','003','健康',sysdate,'')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008315)
+
+
+insert into healthImfo values('005','005','006','健康',sysdate,'')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008315)
+
+
+insert into healthImfo values('006','006','009','健康',sysdate,'')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008315)
+
+
+insert into healthImfo values('007','007','006','健康',sysdate,'')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008315)
+
+
+insert into healthImfo values('008','008','007','健康',sysdate,'')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008315)
+
+
+insert into healthImfo values('009','009','011','健康',sysdate,'')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008315)
+
+
+insert into healthImfo values('010','010','014','健康',sysdate,'')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008315)
+
+
+insert into healthImfo values('011','011','012','健康',sysdate,'')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008315)
+
+
+insert into healthImfo values('012','012','010','健康',sysdate,'')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008315)
+
+
+create table managerImfo(
+             *
+第 1 行出现错误:
+ORA-00955: 名称已由现有对象使用
+
+
+insert into managerImfo values('000','admin','admin')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008363)
+
+
+insert into managerImfo values('111','小林','admin')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008363)
+
+
+create table shelterImfo(
+             *
+第 1 行出现错误:
+ORA-00955: 名称已由现有对象使用
+
+
+insert into shelterImfo values(1,'阳光庇护所','阳光路388号',533900,20,16)
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008317)
+
+
+insert into shelterImfo values(2,'爱宠之家','祈福路388号',533900,15,11)
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008317)
+
+
+insert into shelterImfo values(3,'LoveAndPeace','鲁磨路388号',533900,15,11)
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008317)
+
+
+create table UserImfo(
+             *
+第 1 行出现错误:
+ORA-00955: 名称已由现有对象使用
+
+
+insert into UserImfo values('001','大头','62591102','111@qq.com',110110120,'001')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008318)
+
+
+insert into UserImfo values('002','翠花','62591102','222@qq.com',110110130,'001')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008318)
+
+
+insert into UserImfo values('003','狗剩','62591102','333@qq.com',110110140,'001')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008318)
+
+
+insert into UserImfo values('004','狗蛋','62591102','444@qq.com',110110150,'001')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008318)
+
+
+insert into UserImfo values('005','建国','62591102','555@qq.com',110110160,'001')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008318)
+
+
+insert into UserImfo values('006','建业','62591102','666@qq.com',110110170,'002')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008318)
+
+
+insert into UserImfo values('007','傲天','62591102','777@qq.com',110110180,'002')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008318)
+
+
+insert into UserImfo values('008','菜花','62591102','888@qq.com',110110190,'002')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008318)
+
+
+insert into UserImfo values('009','梓晨','62591102','888@qq.com',110110200,'002')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008318)
+
+
+insert into UserImfo values('010','博文','62591102','888@qq.com',110110210,'003')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008318)
+
+
+insert into UserImfo values('011','子涵','62591102','888@qq.com',110110220,'003')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008318)
+
+
+insert into UserImfo values('012','雨泽','62591102','888@qq.com',110110230,'003')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008318)
+
+
+insert into UserImfo values('013','文昊','62591102','888@qq.com',110110240,'003')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008318)
+
+
+insert into UserImfo values('014','伟祺','62591102','888@qq.com',110110250,'003')
+*
+第 1 行出现错误:
+ORA-00001: 违反唯一约束条件 (SYSTEM.SYS_C008318)
+
+
+create table vaccinesImfo(
+             *
+第 1 行出现错误:
+ORA-00955: 名称已由现有对象使用
+
+
+
+已创建 1 行。
+
+
+已创建 1 行。
+
+
+已创建 1 行。
+
+
+已创建 1 行。
+
+
+已创建 1 行。
+
+
+已创建 1 行。
+
+
+已创建 1 行。
+
+
+已创建 1 行。
+
+
+已创建 1 行。
+
+
+已创建 1 行。
+
+
+已创建 1 行。
+
+
+已创建 1 行。
+
+从 Oracle Database 12c Enterprise Edition Release 12.2.0.1.0 - 64bit Production 断开

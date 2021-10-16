@@ -1,0 +1,21 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1618124356186,792,HTTP请求,200,OK,搜索 1-2,text,true,,4287,144,17,17,https://gitee.com/search/relative_project?q=test,792,0,115
+1618124356130,853,HTTP请求,200,OK,搜索 1-1,text,true,,4287,144,17,17,https://gitee.com/search/relative_project?q=test,852,0,115
+1618124356233,937,HTTP请求,200,OK,搜索 1-3,text,true,,4287,144,18,18,https://gitee.com/search/relative_project?q=test,937,0,114
+1618124356280,1084,HTTP请求,200,OK,搜索 1-4,text,true,,4287,144,17,17,https://gitee.com/search/relative_project?q=test,1084,0,118
+1618124356388,979,HTTP请求,200,OK,搜索 1-6,text,true,,4287,144,16,16,https://gitee.com/search/relative_project?q=test,979,0,112
+1618124356435,948,HTTP请求,200,OK,搜索 1-7,text,true,,4287,144,15,15,https://gitee.com/search/relative_project?q=test,948,0,120
+1618124356342,1048,HTTP请求,200,OK,搜索 1-5,text,true,,4287,144,14,14,https://gitee.com/search/relative_project?q=test,1048,0,120
+1618124356543,984,HTTP请求,200,OK,搜索 1-9,text,true,,4287,144,13,13,https://gitee.com/search/relative_project?q=test,984,0,113
+1618124356482,1381,HTTP请求,200,OK,搜索 1-8,text,true,,4287,144,12,12,https://gitee.com/search/relative_project?q=test,1381,0,119
+1618124356636,1278,HTTP请求,200,OK,搜索 1-11,text,true,,4287,144,11,11,https://gitee.com/search/relative_project?q=test,1278,0,111
+1618124356743,1186,HTTP请求,200,OK,搜索 1-13,text,true,,4287,144,10,10,https://gitee.com/search/relative_project?q=test,1186,0,113
+1618124356588,1382,HTTP请求,200,OK,搜索 1-10,text,true,,4287,144,9,9,https://gitee.com/search/relative_project?q=test,1382,0,112
+1618124356682,1375,HTTP请求,200,OK,搜索 1-12,text,true,,4287,144,8,8,https://gitee.com/search/relative_project?q=test,1375,0,110
+1618124356839,1308,HTTP请求,200,OK,搜索 1-15,text,true,,4287,144,7,7,https://gitee.com/search/relative_project?q=test,1308,0,109
+1618124357080,1123,HTTP请求,200,OK,搜索 1-20,text,true,,4287,144,6,6,https://gitee.com/search/relative_project?q=test,1123,0,116
+1618124356880,1325,HTTP请求,200,OK,搜索 1-16,text,true,,4287,144,5,5,https://gitee.com/search/relative_project?q=test,1325,0,117
+1618124356791,1436,HTTP请求,200,OK,搜索 1-14,text,true,,4287,144,4,4,https://gitee.com/search/relative_project?q=test,1436,0,111
+1618124357030,1204,HTTP请求,200,OK,搜索 1-19,text,true,,4287,144,3,3,https://gitee.com/search/relative_project?q=test,1204,0,109
+1618124356980,1282,HTTP请求,200,OK,搜索 1-18,text,true,,4287,144,2,2,https://gitee.com/search/relative_project?q=test,1282,0,126
+1618124356929,1339,HTTP请求,200,OK,搜索 1-17,text,true,,4287,144,1,1,https://gitee.com/search/relative_project?q=test,1339,0,120

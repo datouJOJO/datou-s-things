@@ -1,0 +1,13 @@
+http://127.0.0.1:8888/all.html
+http://127.0.0.1:8888/show5.jsp
+http://127.0.0.1:8888/test1.html
+http://127.0.0.1:8888/test2.jsp
+http://127.0.0.1:8888/test3.html
+http://127.0.0.1:8888/test6.jsp
+
+http://127.0.0.1:8080/all.html
+http://127.0.0.1:8080/show5.jsp
+http://127.0.0.1:8080/test1.html
+http://127.0.0.1:8080/test2.jsp
+http://127.0.0.1:8080/test3.html
+http://127.0.0.1:8080/test6.jsp

@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>504</width>
+    <height>392</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLCDNumber" name="lcdNumber">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>50</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_01">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>13</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_03">
+    <property name="geometry">
+     <rect>
+      <x>91</x>
+      <y>13</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_02">
+    <property name="geometry">
+     <rect>
+      <x>52</x>
+      <y>13</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_10">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>50</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_11">
+    <property name="geometry">
+     <rect>
+      <x>52</x>
+      <y>50</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_12">
+    <property name="geometry">
+     <rect>
+      <x>91</x>
+      <y>50</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_19">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>87</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_20">
+    <property name="geometry">
+     <rect>
+      <x>52</x>
+      <y>87</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_21">
+    <property name="geometry">
+     <rect>
+      <x>91</x>
+      <y>87</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_13">
+    <property name="geometry">
+     <rect>
+      <x>132</x>
+      <y>50</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_14">
+    <property name="geometry">
+     <rect>
+      <x>171</x>
+      <y>50</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_05">
+    <property name="geometry">
+     <rect>
+      <x>171</x>
+      <y>13</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_04">
+    <property name="geometry">
+     <rect>
+      <x>132</x>
+      <y>13</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_06">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>13</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_15">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>50</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_22">
+    <property name="geometry">
+     <rect>
+      <x>132</x>
+      <y>87</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_23">
+    <property name="geometry">
+     <rect>
+      <x>171</x>
+      <y>87</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_24">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>87</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_16">
+    <property name="geometry">
+     <rect>
+      <x>251</x>
+      <y>50</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_17">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>50</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_08">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>13</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_07">
+    <property name="geometry">
+     <rect>
+      <x>251</x>
+      <y>13</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_09">
+    <property name="geometry">
+     <rect>
+      <x>329</x>
+      <y>13</y>
+      <width>31</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_18">
+    <property name="geometry">
+     <rect>
+      <x>329</x>
+      <y>50</y>
+      <width>31</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_25">
+    <property name="geometry">
+     <rect>
+      <x>251</x>
+      <y>87</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_26">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>87</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_27">
+    <property name="geometry">
+     <rect>
+      <x>329</x>
+      <y>87</y>
+      <width>31</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_37">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>162</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_38">
+    <property name="geometry">
+     <rect>
+      <x>52</x>
+      <y>162</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_29">
+    <property name="geometry">
+     <rect>
+      <x>52</x>
+      <y>125</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_28">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>125</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_30">
+    <property name="geometry">
+     <rect>
+      <x>91</x>
+      <y>125</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_39">
+    <property name="geometry">
+     <rect>
+      <x>91</x>
+      <y>162</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_46">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>199</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_47">
+    <property name="geometry">
+     <rect>
+      <x>52</x>
+      <y>199</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_48">
+    <property name="geometry">
+     <rect>
+      <x>91</x>
+      <y>199</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_31">
+    <property name="geometry">
+     <rect>
+      <x>132</x>
+      <y>125</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_33">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>125</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_51">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>199</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_40">
+    <property name="geometry">
+     <rect>
+      <x>132</x>
+      <y>162</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_32">
+    <property name="geometry">
+     <rect>
+      <x>171</x>
+      <y>125</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_50">
+    <property name="geometry">
+     <rect>
+      <x>171</x>
+      <y>199</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_49">
+    <property name="geometry">
+     <rect>
+      <x>132</x>
+      <y>199</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_42">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>162</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_41">
+    <property name="geometry">
+     <rect>
+      <x>171</x>
+      <y>162</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_43">
+    <property name="geometry">
+     <rect>
+      <x>251</x>
+      <y>162</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_44">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>162</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_35">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>125</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_34">
+    <property name="geometry">
+     <rect>
+      <x>251</x>
+      <y>125</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_36">
+    <property name="geometry">
+     <rect>
+      <x>329</x>
+      <y>125</y>
+      <width>31</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_45">
+    <property name="geometry">
+     <rect>
+      <x>329</x>
+      <y>162</y>
+      <width>31</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_52">
+    <property name="geometry">
+     <rect>
+      <x>251</x>
+      <y>199</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_53">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>199</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_54">
+    <property name="geometry">
+     <rect>
+      <x>329</x>
+      <y>199</y>
+      <width>31</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_61">
+    <property name="geometry">
+     <rect>
+      <x>251</x>
+      <y>237</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_63">
+    <property name="geometry">
+     <rect>
+      <x>329</x>
+      <y>237</y>
+      <width>31</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_81">
+    <property name="geometry">
+     <rect>
+      <x>329</x>
+      <y>311</y>
+      <width>31</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_70">
+    <property name="geometry">
+     <rect>
+      <x>251</x>
+      <y>274</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_62">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>237</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_80">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>311</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_79">
+    <property name="geometry">
+     <rect>
+      <x>251</x>
+      <y>311</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_72">
+    <property name="geometry">
+     <rect>
+      <x>329</x>
+      <y>274</y>
+      <width>31</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_71">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>274</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_66">
+    <property name="geometry">
+     <rect>
+      <x>91</x>
+      <y>274</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_55">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>237</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_75">
+    <property name="geometry">
+     <rect>
+      <x>91</x>
+      <y>311</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_64">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>274</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_56">
+    <property name="geometry">
+     <rect>
+      <x>52</x>
+      <y>237</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_57">
+    <property name="geometry">
+     <rect>
+      <x>91</x>
+      <y>237</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_74">
+    <property name="geometry">
+     <rect>
+      <x>52</x>
+      <y>311</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_73">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>311</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_65">
+    <property name="geometry">
+     <rect>
+      <x>52</x>
+      <y>274</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_58">
+    <property name="geometry">
+     <rect>
+      <x>132</x>
+      <y>237</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_60">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>237</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_78">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>311</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_67">
+    <property name="geometry">
+     <rect>
+      <x>132</x>
+      <y>274</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_59">
+    <property name="geometry">
+     <rect>
+      <x>171</x>
+      <y>237</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_77">
+    <property name="geometry">
+     <rect>
+      <x>171</x>
+      <y>311</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_76">
+    <property name="geometry">
+     <rect>
+      <x>132</x>
+      <y>311</y>
+      <width>32</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_69">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>274</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="num_68">
+    <property name="geometry">
+     <rect>
+      <x>171</x>
+      <y>274</y>
+      <width>32</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="level_box">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>10</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>简单</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>中等</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>困难</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>变态</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButton_replay">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>150</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>重玩</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_begin">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>190</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开始</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_delete">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>230</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>清除</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_ts">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>270</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>提示</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_submit">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>310</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>提交</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_stop">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>110</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>暂停</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>504</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,11 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1618124376118,1024,HTTP请求,200,OK,搜索 1-1,text,true,,4287,144,10,10,https://gitee.com/search/relative_project?q=test,1024,0,117
+1618124376229,915,HTTP请求,200,OK,搜索 1-2,text,true,,4287,144,9,9,https://gitee.com/search/relative_project?q=test,915,0,118
+1618124376322,887,HTTP请求,200,OK,搜索 1-3,text,true,,4287,144,8,8,https://gitee.com/search/relative_project?q=test,887,0,112
+1618124376431,822,HTTP请求,200,OK,搜索 1-4,text,true,,4287,144,7,7,https://gitee.com/search/relative_project?q=test,822,0,110
+1618124376527,874,HTTP请求,200,OK,搜索 1-5,text,true,,4287,144,6,6,https://gitee.com/search/relative_project?q=test,874,0,114
+1618124376618,989,HTTP请求,200,OK,搜索 1-6,text,true,,4287,144,5,5,https://gitee.com/search/relative_project?q=test,989,0,116
+1618124376726,913,HTTP请求,200,OK,搜索 1-7,text,true,,4287,144,4,4,https://gitee.com/search/relative_project?q=test,913,0,120
+1618124376817,827,HTTP请求,200,OK,搜索 1-8,text,true,,4287,144,3,3,https://gitee.com/search/relative_project?q=test,827,0,119
+1618124376918,812,HTTP请求,200,OK,搜索 1-9,text,true,,4287,144,2,2,https://gitee.com/search/relative_project?q=test,812,0,112
+1618124377017,787,HTTP请求,200,OK,搜索 1-10,text,true,,4287,144,1,1,https://gitee.com/search/relative_project?q=test,787,0,120

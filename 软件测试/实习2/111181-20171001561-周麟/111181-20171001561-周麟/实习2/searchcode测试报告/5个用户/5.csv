@@ -1,0 +1,16 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1618124497690,5101,HTTP Request,200,OK,Thread Group 1-1,text,true,,163667,252,5,5,https://searchcode.com/?q=test,615,0,299
+1618124497690,615,HTTP Request-0,301,Moved Permanently,Thread Group 1-1,text,true,,408,126,5,5,http://searchcode.com/?q=test,615,0,299
+1618124498306,4485,HTTP Request-1,200,OK,Thread Group 1-1,text,true,,163259,126,5,5,https://searchcode.com/?q=test,1802,0,1156
+1618124498103,4967,HTTP Request,200,OK,Thread Group 1-3,text,true,,163667,252,4,4,https://searchcode.com/?q=test,687,0,337
+1618124498103,687,HTTP Request-0,301,Moved Permanently,Thread Group 1-3,text,true,,408,126,4,4,http://searchcode.com/?q=test,687,0,337
+1618124498790,4280,HTTP Request-1,200,OK,Thread Group 1-3,text,true,,163259,126,4,4,https://searchcode.com/?q=test,1703,0,971
+1618124497903,5645,HTTP Request,200,OK,Thread Group 1-2,text,true,,163667,252,3,3,https://searchcode.com/?q=test,753,0,392
+1618124497903,753,HTTP Request-0,301,Moved Permanently,Thread Group 1-2,text,true,,408,126,3,3,http://searchcode.com/?q=test,753,0,392
+1618124498656,4892,HTTP Request-1,200,OK,Thread Group 1-2,text,true,,163259,126,3,3,https://searchcode.com/?q=test,1891,0,1143
+1618124498291,5263,HTTP Request,200,OK,Thread Group 1-4,text,true,,163667,252,2,2,https://searchcode.com/?q=test,746,0,352
+1618124498291,746,HTTP Request-0,301,Moved Permanently,Thread Group 1-4,text,true,,408,126,2,2,http://searchcode.com/?q=test,746,0,352
+1618124499038,4516,HTTP Request-1,200,OK,Thread Group 1-4,text,true,,163259,126,2,2,https://searchcode.com/?q=test,1903,0,1128
+1618124498495,5085,HTTP Request,200,OK,Thread Group 1-5,text,true,,163667,252,1,1,https://searchcode.com/?q=test,711,0,364
+1618124498495,711,HTTP Request-0,301,Moved Permanently,Thread Group 1-5,text,true,,408,126,1,1,http://searchcode.com/?q=test,711,0,364
+1618124499206,4374,HTTP Request-1,200,OK,Thread Group 1-5,text,true,,163259,126,1,1,https://searchcode.com/?q=test,1693,0,949
