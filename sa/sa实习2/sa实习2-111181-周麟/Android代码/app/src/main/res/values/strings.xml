@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">SA_is_very_hard</string>
-    <string name="title_home">均价</string>
-    <string name="title_dashboard">市盈率</string>
-    <string name="title_notifications">收盘价</string>
-</resources>
